@@ -36,7 +36,7 @@ try:
     title = wait.until(EC.presence_of_element_located((By.XPATH, '//span[@data-testid="hero__primary-text"]'))).text
     print(f"Title: {title}")
 
-    # Extract Director without clicking
+    # Extract Director without clicking please review
     try:
         director_element = wait.until(
             EC.presence_of_element_located(
@@ -53,7 +53,7 @@ try:
     genres = [genre.text for genre in genre_elements]
     print(f"Genres: {', '.join(genres)}")
 
-    # Extract Certificate
+    # Extract Certificate please review
     try:
         certificate_element = wait.until(
             EC.presence_of_element_located((By.XPATH, '//li[.//span[text()="Certificate"]]/div/ul/li/span'))
@@ -107,4 +107,4 @@ try:
         print(f"Score: {review['score']}, Date: {review['date']}, Author: {review['author']}, Review: {review['review']}")
 
 finally:
-    driver.quit()
+    driver.quit() 
